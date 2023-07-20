@@ -25,13 +25,18 @@ const geometry = new THREE.BoxGeometry( 2, 1, 1 );
 const material = new THREE.MeshBasicMaterial( { color: "#A33F81" } );
 const cube = new THREE.Mesh( geometry, material );
 
+window.cube = cube;
+
+cube.material.wireframe = true;
+
 // Add cube to Scene
 scene.add( cube );
 
 // Set the initial camera position and target
 camera.position.set(0, 0, 5); // Set the initial camera position (e.g., 5 units along the Z-axis)
 camera.lookAt(0, 0, 0); // Set the point the camera will look at initially (e.g., the origin)
-const control = new OrbitControls(camera, renderer.domElement);
+
+// const control = new OrbitControls(camera, renderer.domElement);
 
 // Render Loop
 var render = function () {
@@ -42,7 +47,7 @@ var render = function () {
  
   // Render the scene
   renderer.render(scene, camera);
-  control.update();
+  // control.update();
   
 };
 
