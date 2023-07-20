@@ -25,6 +25,7 @@ const geometry = new THREE.BoxGeometry( 2, 1, 1 );
 const material = new THREE.MeshBasicMaterial( { color: "#A33F81" } );
 const cube = new THREE.Mesh( geometry, material );
 
+window.scene = scene;
 window.cube = cube;
 
 cube.material.wireframe = true;
