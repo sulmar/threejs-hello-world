@@ -94,7 +94,7 @@ cube.material.wireframe = true;
 
 // Add cube to Scene
 scene.add( cube );
-// scene.add( cube2 );
+scene.add( cube2 );
 scene.add(profileMesh);
 
 // Add axes to Scene
